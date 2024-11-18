@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        function escreveDiv(texto){
+            document.getElementById("minhaDiv").innerHTML = texto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escrevendo na Div</h1>
+    <button onclick="escreveDiv('<h1> Programação Web </h1>')">Escrever</button>
+    <div id="minhaDiv"></div>
+</body>
+</html>
