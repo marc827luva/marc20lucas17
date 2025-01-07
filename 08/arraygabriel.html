@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays</title>
+
+
+    <script>
+
+        let linguagens = Array();
+
+        linguagens[0] = 'melancia';
+        linguagens[1] = 'uva';
+        linguagens[2] = 'jaca';
+        linguagens[3] = 'manga';
+        linguagens[4] = 'morango';
+        linguagens[5] = 'caju';
+        linguagens[6] = 'caja';
+
+
+        function mostrarlinguagens() {
+            const container = document.getElementById('minhaDiv');
+            for (var i = 0; i < linguagens.length; i++) {
+                var tag = '<h5>' + i + '-' + linguagens[i] + '</h5>';
+                container.innerHTML += tag;
+            }
+        }
+        function posicaolinguagens() {
+            var indice = prompt('qual posição da lista q tu quer consultar?');
+            alert(linguagens[indice]);
+        }
+        function limparlinguagens() {
+            document.getElementById('minhaDiv').innerHTML = "";
+            var form = document.querySelector('form');
+            if (form) {
+                form.reset();
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <a href="arrys.html"></a>
+
+    <h1>ARRAY COM FRUTAS</h1>
+    <button onclick="mostrarlinguagens()">mostrar as frutas disponiveis</button> <br><br>
+    <button onclick="posicaolinguagens()">a posição das frutas</button>
+    <button id="apagar" onclick="limparlinguagens()">limpar</button>
+    <div id="minhaDiv"></div>
+
+</body>
+
+</html>

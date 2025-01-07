@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simulação</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 10px;
+        }
+        .container {
+            max-width: 10000px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+        h1 {
+            text-align: left;
+        }
+        #listaPessoas {
+            margin-top: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #000000;
+        }
+        .action-btn {
+            background-color: #f44336;
+        }
+        .action-btn:hover {
+            background-color: #000000;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #ddd;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<a href="..//index.html">pagina inicial</a>
+<div class="container">
+    <h1>simulação com nome de pessoas</h1>
+    <input type="text" id="nomePessoa"/>
+    <button onclick="adicionarPessoa()">adicionar pessoa</button>
+    <button class="action-btn" onclick="removerPessoa()">remover a última pessoa</button>
+
+    <h3>pessoas na lista:</h3>
+    <ul id="listaPessoas"></ul>
+</div>
+
+<script>
+    let pilhaPessoas=[];
+    function adicionarPessoa(){
+        const nome = document.getElementById('nomePessoa').value;
+        if (nome) {
+            pilhaPessoas.push(nome);
+            document.getElementById('nomePessoa').value = ''
+            atualizarLista();
+        }
+        else {
+            alert('por favor né meu fi, digita um nome primeiro.');
+        }
+    }
+    function removerPessoa() {
+        if (pilhaPessoas.length > 0) {
+            const pessoaRemovida = pilhaPessoas.pop()
+            alert(`${pessoaRemovida} foi removido(a) da lista.`);
+            atualizarLista();
+        } 
+        else {
+            alert('não tem pessoas para remover não bb.');
+        }
+    }
+    function atualizarLista() {
+        const listaElement = document.getElementById('listaPessoas');
+        listaElement.innerHTML = '';
+        pilhaPessoas.forEach((pessoa) => {
+            const li = document.createElement('li');
+            li.textContent = pessoa;
+            listaElement.appendChild(li);
+        });
+    }
+</script>
+
+</body>
+</html>
