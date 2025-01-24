@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Grid</title>
+    <style type="text/css">
+        /* Resetando alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Definindo o container do grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 colunas com largura igual */
+    gap: 10px; /* Espaçamento entre as colunas e linhas */
+    padding: 10px;
+}
+
+/* Definindo o estilo para os itens do grid */
+.grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Exemplo de como ocupar várias colunas e linhas */
+.item1 {
+    grid-column: span 4; /* Ocupa 4 colunas */
+    grid-row: span 2;    /* Ocupa 2 linhas */
+}
+
+.item2 {
+    grid-column: span 2;
+}
+
+.item3 {
+    grid-column: span 3;
+}
+
+.item4 {
+    grid-column: span 6;
+}
+
+.item5 {
+    grid-column: span 2;
+}
+
+.item6 {
+    grid-column: span 3;
+}
+
+.item7 {
+    grid-column: span 4;
+}
+
+.item8 {
+    grid-column: span 2;
+}
+
+.item9 {
+    grid-column: span 3;
+}
+
+.item10 {
+    grid-column: span 5;
+}
+
+.item11 {
+    grid-column: span 2;
+}
+
+.item12 {
+    grid-column: span 6;
+}
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7YMHtkcGzhlp4XRYnfbYsVULmOr5Jd_nGg&s" width="600xx"></div>
+        <div class="grid-item item2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTg8K5eAkcV-K_2u3Pcmmb7XP4Lu1AOIlcug&s" ></div>
+        <div class="grid-item item3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeRE-w38DzWPgIxecXln5TzXetB6YKDuq5KA&s" ></div>
+        <div class="grid-item item4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPmovxggpnyaEF8ew1JWd86TolU6L7zwD97g&s" ></div>
+        <div class="grid-item item5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ7s3DsqXqo4N9fvDuP9iZKomqr75IEohYSg&s" ></div>
+        <div class="grid-item item6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXc732-Bo-rifViDrMVzKl72YDqwyV0wqIaQ&s" ></div>
+    </div>
+</body>
+</html>
